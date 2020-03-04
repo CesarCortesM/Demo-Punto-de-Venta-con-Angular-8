@@ -1,0 +1,70 @@
+<div class="login">
+  <div class="mask flex-center">
+    <div class="container">
+      <div>
+        <div class="logo">
+          <img src="../../assets/Logo1.jpg" alt="" height="40px">
+          <p class="fuente-dosis">Punto de Venta</p>
+        </div>
+        <form *ngIf="form_login">
+          <p class="inicio-sesion fuente-sfui-bold">Iniciar Sesión</p>
+          <p class="inicio-info fuente-sfui">Accede a tu panel para administrar tus negocios</p>
+          <div class="md-form">
+            <input mdbInput placeholder="Email" type="text" id="form58" class="form-control">
+          </div>
+          <div class="md-form">
+            <input mdbInput placeholder="Contraseña" type="text" id="form58" class="form-control">
+          </div>
+          <div class="ingresar">
+            <button class="btn-personalizado" type="button" mdbBtn color="primary" mdbWavesEffect
+            routerLinkActive="active" routerLink="/mis-negocios">Ingresar</button>
+            <a href="#" class="recovery-password fuente-sfui">¿Olvidaste tu contraseña?</a>
+          </div>
+          <a href="#" class="fuente-sfui">O inicia sesión con</a>
+          <div class="container-social-buttons">
+            <button type="button" mdbBtn size="lg" color="fb" class="waves-light" mdbWavesEffect>
+              <i class="fab fa-facebook-f left"></i>Facebook
+            </button>
+            <button type="button" mdbBtn size="lg" color="gplus" class="waves-light" mdbWavesEffect>
+              <i class="fab fa-google-plus left"></i>Google
+            </button>
+            <button type="button" mdbBtn size="lg" color="tw" class="waves-light" mdbWavesEffect>
+              <i class="fab fa-twitter left"></i>Twitter
+            </button>
+          </div>
+          <a href="#" class="fuente-sfui-bold" (click)="mostrarFormRegistro()">Registra una nueva cuenta</a>
+        </form>
+
+        <form *ngIf="form_registro">
+          <p class="inicio-sesion fuente-sfui-bold">Registrate</p>
+          <p class="inicio-info fuente-sfui">Accede a tu panel para administrar tus negocios</p>
+          <div class="md-form">
+            <input mdbInput placeholder="Nombre Completo" type="text" id="form58" class="form-control">
+          </div>
+          <div class="md-form">
+            <input mdbInput placeholder="Email" type="text" id="form58" class="form-control">
+          </div>
+          <div class="md-form">
+            <input mdbInput placeholder="Contraseña" type="text" id="form58" class="form-control">
+          </div>
+          <div class="ingresar">
+            <button class="btn-personalizado" type="button" mdbBtn color="primary" mdbWavesEffect>Registrar</button>
+          </div>
+          <a href="#" class="fuente-sfui">O registrate con</a>
+          <div class="container-social-buttons">
+            <button type="button" mdbBtn size="lg" color="fb" class="waves-light" mdbWavesEffect>
+              <i class="fab fa-facebook-f left"></i>Facebook
+            </button>
+            <button type="button" mdbBtn size="lg" color="gplus" class="waves-light" mdbWavesEffect>
+              <i class="fab fa-google-plus left"></i>Google
+            </button>
+            <button type="button" mdbBtn size="lg" color="tw" class="waves-light" mdbWavesEffect>
+              <i class="fab fa-twitter left"></i>Twitter
+            </button>
+          </div>
+          <a href="#" class="fuente-sfui-bold" (click)="ocultarFormRegistro()">Inicia sesión con tu cuenta</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,127 @@
+<app-nav></app-nav>
+<div class="mis-negocios">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="align-self-center">
+                    <p class="fuente-sfui">Mis negocios</p>
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-end">
+                    <button mdbBtn type="button" color="primary" mdbWavesEffect
+                    routerLinkActive="active" routerLink="/registrar-negocio">
+                        <mdb-icon fas icon="plus-circle" class="mr-1"></mdb-icon>Crear nuevo
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="md-form">
+                    <mdb-icon fas icon="search" class="prefix"></mdb-icon>
+                    <input mdbInput type="text" id="form1" class="form-control" placeholder="Buscar">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="no-data" style="display: none !important;">
+                    <p class="fuente-sfui">No tienes negocios registrados</p>
+                    <hr>
+                    <img src="../../../assets/negocio.jpg" height="200px" alt="">
+                    <p class="fuente-sfui">Aun no has registrado ningún negocio,</p>
+                    <p class="fuente-sfui">para registrarlo presiona el botón "Crear Nuevo"</p>
+                </div>
+                <table mdbTable responsive="true" hover="true">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Giro de negocio</th>
+                        <th>Categoria</th>
+                        <th>Dirección</th>
+                        <th>Gerarquia</th>
+                        <th>N° de Productos Registrados</th>
+                        <th>Opciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="../../../assets/1.jpg" height="102px" alt=""></td>
+                            <td>Tienda 1</td>
+                            <td>Comercio</td>
+                            <td>Abarrotes</td>
+                            <td>Mexico</td>
+                            <td>
+                                <button type="button" mdbBtn color="primary" mdbWavesEffect>Principal</button>
+                            </td>
+                            <td>20</td>
+                            <td>
+                                <div>
+                                    <mdb-icon far icon="eye"></mdb-icon>
+                                    <mdb-icon fas icon="trash" (click)="basicModal.show()"></mdb-icon>
+                                    <div class="btn-group" mdbDropdown>
+                                        <mdb-icon fas icon="ellipsis-v" classInside="dropdown-toggle"
+                                        mdbDropdownToggle class="waves-effect"mdbWavesEffect>
+                                        </mdb-icon>
+                                        <div class="dropdown-menu dropdown-primary dropdown-menu-right">
+                                          <a class="dropdown-item" href="#">Convertir en principal</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="../../../assets/2.jpg" height="102px" alt=""></td>
+                            <td>Tienda 2</td>
+                            <td>Comercio</td>
+                            <td>Abarrotes</td>
+                            <td>Mexico</td>
+                            <td>
+                                <button type="button" mdbBtn color="warning" mdbWavesEffect>Secundario</button>
+                            </td>
+                            <td>6</td>
+                            <td>
+                                <div>
+                                    <mdb-icon far icon="eye"></mdb-icon>
+                                    <mdb-icon fas icon="trash"></mdb-icon>
+                                    <div class="btn-group" mdbDropdown>
+                                        <mdb-icon fas icon="ellipsis-v" classInside="dropdown-toggle"
+                                        mdbDropdownToggle class="waves-effect"mdbWavesEffect>
+                                        </mdb-icon>
+                                        <div class="dropdown-menu dropdown-primary dropdown-menu-right">
+                                          <a class="dropdown-item" href="#">Convertir en principal</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <div>
+<div>
+
+
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="fuente-sfui">Eliminar</h4>
+                <p class="fuente-sfui">Al eliminar el negocio toda su información y los productos asociados serán borrados, ¿Está seguro de eliminar este negocio?</p>
+                <div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" mdbBtn color="primary" mdbWavesEffect>No</button>
+                        <button type="button" mdbBtn color="primary" mdbWavesEffect>Sí</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
